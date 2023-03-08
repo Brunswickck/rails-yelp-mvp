@@ -1,0 +1,12 @@
+<h1>Top Restaurants</h1>
+<ul>
+  <% @topRestaurants.uniq.each do |restaurant| %>
+  <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+  <br>
+  <%= restaurant.address %></li>
+  <br>
+  <%= restaurant.phone_number %></li>
+  <br>
+  <%= restaurant.category %></li>
+  <% end %>
+</ul>
